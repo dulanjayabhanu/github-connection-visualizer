@@ -1,0 +1,61 @@
+# -----------------------------
+# OS generated files
+# -----------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# -----------------------------
+# Log files
+# -----------------------------
+*.log
+
+# -----------------------------
+# Build / Cache directories
+# -----------------------------
+dist/
+build/
+cache/
+*.cache
+*.tmp
+tmp/
+temp/
+
+# -----------------------------
+# Dependency directories
+# -----------------------------
+node_modules/
+jspm_packages/
+bower_components/
+
+# -----------------------------
+# Environment & secrets
+# -----------------------------
+.env
+.env.*
+*.local
+
+# -----------------------------
+# IDE / Editor settings
+# -----------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------
+# Misc
+# -----------------------------
+*.swp
+*.bak
+*.old
+*.orig
+*.rej
+
+# -----------------------------
+# GitHub Pages artifacts
+# (in case you build locally before deploy)
+# -----------------------------
+_site/
+docs/

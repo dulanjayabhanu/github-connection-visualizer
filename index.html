@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- necessary meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>GitHub Connection Visualizer | Home</title>
+    
+    <meta name="description" content="GitHub Connection Visualizer helps you explore followers, unfollowers, and fans with secure encryption, powerful filters, and zero personal token requirements." />
+    <meta name="keywords" content="GitHub, Version Controll, followers, GitHub unfollowers, GitHub network visualizer, GitHub backup, GitHub analytics" />
+    <meta name="author" content="GitHub Connection Visualizer Team" />
+    <meta name="robots" content="index, follow" />
+    <!-- necessary meta tags -->
+
+    <!-- app icons -->
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+
+    <meta name="apple-mobile-web-app-title" content="GitHub Connection Visualizer" />
+    
+    <link rel="manifest" href="/assets/icons/site.webmanifest" />
+    <link rel="mask-icon" href="/assets/icons/favicon.svg" color="#fdfffc">
+    <!-- app icons -->
+
+    <!-- open graph and facebook preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GitHub Connection Visualizer" />
+    <meta property="og:description" content="Visualize your GitHub followers, unfollowers, and connections with privacy-first encryption. No personal access token required." />
+    <meta property="og:url" content="https://dulanjayabhanu.github.io/github-connection-visualizer/" />
+    <meta property="og:image" content="https://dulanjayabhanu.github.io/github-connection-visualizer/assets/images/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- open graph and facebook preview -->
+
+    <!-- twitter(X) card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GitHub Connection Visualizer" />
+    <meta name="twitter:description" content="Analyze and manage your GitHub connections securely and visually." />
+    <meta name="twitter:image" content="https://dulanjayabhanu.github.io/github-connection-visualizer/assets/images/og-image.png" />
+    <meta name="twitter:site" content="@dulanjayabhanu" />
+    <!-- twitter(X) card -->
+
+    <!-- theme and UI -->
+    <meta name="theme-color" content="#191d24" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- theme and UI -->
+
+    <!-- preconnect to API -->
+    <link rel="preconnect" href="https://api.github.com" crossorigin />
+    <!-- preconnect to API -->
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "GitHub Connection Visualizer",
+        "url": "https://dulanjayabhanu.github.io/github-connection-visualizer/",
+        "description": "Visualize, filter, and manage your GitHub followers and unfollowers securely with no personal access token.",
+        "applicationCategory": "Utility",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <!-- JSON-LD -->
+    
+    <!-- css, font, inconPack, notificationPack -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- css, font, inconPack, notificationPack -->
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container-fluid">
+            <div class="row justify-content-center py-4">
+                <!-- main-dom-content-loading-area -->
+
+                <!-- screen-filteration-wrapper -->
+                <div class="screen-filteration-wrapper">
+                    <div class="d-flex flex-column row-gap-2">
+                        <div class="col-12">
+                            <i class="bi bi-laptop-fill text-color" style="font-size: 30px;"></i>
+                        </div>
+                        <div class="col-12">
+                            <span class="header-color fs-5 text-capitalize">Desktop Version Required</span>
+                        </div>
+                        <div class="col-12 pt-2">
+                            <span class="text-color text-capitalize">This application is designed for desktop use
+                                only.</span>
+                        </div>
+                        <div class="col-12">
+                            <span class="muted-text-color text-capitalize">Please open it on a device with a larger
+                                screen (laptop or desktop) to access all features and ensure the best experience.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- screen-filteration-wrapper -->
+
+                <!-- main-application-related-content-wrapper -->
+                <div class="d-flex flex-column align-items-center row-gap-3 app-wrapper">
+                    <!-- main-card -->
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-9 card card-wrapper glass-card px-4 py-3">
+                        <div class="card-body">
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center py-3">
+                                <div class="main-app-logo"></div>
+                            </div>
+                            <div class="col-12 d-flex flex-row justify-content-center align-items-center column-gap-2">
+                                <span class="fs-2 header-color">GitHub Connection Visualizer</span>
+                                <span class="text-color badge badge-wrapper rounded-pill fw-normal px-3 py-2 fs-6" id="app-version">v1.0.0</span>
+                            </div>
+                            <div class="col-12 text-center pt-2 pb-4">
+                                <span class="text-color fs-5">Discover And Manage Your GitHub Connections With
+                                    Ease.</span>
+                            </div>
+
+                            <div class="col-12 py-3">
+                                <div class="card card-wrapper px-4 py-3">
+                                    <div class="row">
+                                        <!-- feature card -->
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                            <div class="row">
+                                                <div class="col-12 py-3">
+                                                    <div class="card card-wrapper px-3 py-4">
+                                                        <div class="row">
+                                                            <div
+                                                                class="col-12 d-flex flex-column align-items-center justify-content-center row-gap-2">
+                                                                <span class="text-color">100%</span>
+                                                                <i class="bi bi-file-earmark-code-fill text-color"
+                                                                    style="font-size: 30px;"></i>
+                                                                <span class="header-color fs-5">Open Source</span>
+                                                                <span class="muted-text-color">You Can Contribute
+                                                                    Too</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- feature card -->
+                                        <!-- feature card -->
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                            <div class="row">
+                                                <div class="col-12 py-3">
+                                                    <div class="card card-wrapper px-3 py-4">
+                                                        <div class="row">
+                                                            <div
+                                                                class="col-12 d-flex flex-column align-items-center justify-content-center row-gap-2">
+                                                                <span class="text-color">100%</span>
+                                                                <i class="bi bi-shield-fill-check text-color"
+                                                                    style="font-size: 30px;"></i>
+                                                                <span class="header-color fs-5">Secure Browser
+                                                                    App</span>
+                                                                <span class="muted-text-color">All Data Is Encrypted
+                                                                    End-To-End</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- feature card -->
+                                        <!-- feature card -->
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                            <div class="row">
+                                                <div class="col-12 py-3">
+                                                    <div class="card card-wrapper px-3 py-4">
+                                                        <div class="row">
+                                                            <div
+                                                                class="col-12 d-flex flex-column align-items-center justify-content-center row-gap-2">
+                                                                <span class="text-color">100%</span>
+                                                                <i class="bi bi-ban-fill text-color"
+                                                                    style="font-size: 30px;"></i>
+                                                                <span class="header-color fs-5">No Access Token
+                                                                    Required</span>
+                                                                <span class="muted-text-color">No Login Or Token
+                                                                    Needed</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- feature card -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <hr>
+                            </div>
+                            <div class="col-12 pt-4">
+                                <div class="card card-wrapper px-3 py-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="text-color fs-5">What Is This App?</span>
+                                        </div>
+                                        <div class="col-12 pt-3">
+                                            <span class="text-color">GitHub Connection Visualizer lets you explore,
+                                                analyze,
+                                                and understand your
+                                                followers and followings without any login or personal access
+                                                token.</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <ul class="text-start pt-2" type="bullet">
+                                                <li class="text-color">See who follows you back, spot inactive
+                                                    connections,
+                                                    and decide who to keep
+                                                    or remove.</li>
+                                                <li class="text-color"><strong class="text-color">This is not a
+                                                        follow-unfollow script.</strong></li>
+                                                <li class="text-color">It is a secure, open-source tool that gives clear
+                                                    visual insights so you can
+                                                    connect with developers you value or clean up accounts you no longer
+                                                    need.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 py-2">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <span class="header-color text-capitalize">This app has a small learning
+                                                curve. For the best experience, we recommend reading the Usage Notes
+                                                before you start.</span>
+                                        </div>
+                                        <div class="col-12 pt-3">
+                                            <p class="d-flex flex-row justify-content-center">
+                                                <button
+                                                    class="btn btn-outline-secondary pagination-button-wrapper rounded-5 px-4 py-2"
+                                                    type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseExample" aria-expanded="false"
+                                                    aria-controls="collapseExample" id="collapsable-button">
+                                                    <i class="bi bi-chevron-down text-color"
+                                                        id="collapsable-button-icon"></i>&nbsp;
+                                                    Important Usage Notes
+                                                </button>
+                                            </p>
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="card card-wrapper px-3 py-4">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="text-color">How to use the app
+                                                                effectively:</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <ul class="text-start pt-2" type="bullet">
+                                                                <li class="text-color">If your GitHub account has under
+                                                                    <strong class="text-color">6.0k (6,000)
+                                                                        followings</strong> and <strong
+                                                                        class="text-color">6.0k (6,000)
+                                                                        followers</strong>, you can usually scan all
+                                                                    data smoothly within about an hour.</li>
+                                                                <li class="text-color">For larger accounts,
+                                                                    GitHub&rsquo;s API rate limits can slow the process.
+                                                                    To handle this, the app uses a <strong
+                                                                        class="text-color">Data Scanning
+                                                                        Monitor</strong> and a <strong
+                                                                        class="text-color">progress tracking
+                                                                        mechanism</strong> that lets you gather data in
+                                                                    safe, repeatable steps until the scan is complete.
+                                                                </li>
+                                                                <li class="text-color">You can also pause at any time by
+                                                                    creating a backup of your current scan. Later,
+                                                                    simply restore the backup to continue where you left
+                                                                    off without starting over.</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span class="text-color">This application has a small
+                                                                learning curve, but helpful &nbsp;<i
+                                                                    class="bi bi-info-circle-fill text-color"></i>&nbsp;
+                                                                <span class="text-color text-decoration-underline">info
+                                                                    button</span> are provided in every key section such
+                                                                as Filters, Data Backup, and Restore.</span>
+                                                        </div>
+                                                        <div class="col-12 pt-2">
+                                                            <span class="text-color">Take a moment to read these tips to
+                                                                get the best experience.</span>
+                                                        </div>
+                                                        <div
+                                                            class="col-12 d-flex flex-row justify-content-center align-items-center pt-4">
+                                                            <button
+                                                                class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapseExample" aria-expanded="false"
+                                                                aria-controls="collapseExample"
+                                                                id="collapsable-end-button">
+                                                                <i class="bi bi-check-circle-fill text-color"></i>&nbsp;
+                                                                Ok, Got It!
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <hr>
+                            </div>
+                            <div class="col-12 pt-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="text-color fs-5">Search Your GitHub Account</span>
+                                    </div>
+                                    <div class="input-group shadow-none pt-3">
+                                        <input type="text"
+                                            class="form-control rounded-start-5 shadow-none input-field pt-2 pb-2 ps-3 pe-3"
+                                            placeholder="Your GitHub Username" aria-label="Recipient username"
+                                            aria-describedby="search-button" spellcheck="false" id="github-username">
+                                        <button
+                                            class="btn btn-secondary button-wrapper rounded-end-5 shadow-none ps-3 pe-3"
+                                            type="button" id="search-button">
+                                            <i class="bi bi-search"></i> &nbsp;Search
+                                        </button>
+                                    </div>
+                                    <div class="col-12 py-3 position-relative">
+                                        <div class="card card-wrapper px-3 py-4">
+                                            <div class="row">
+                                                <div class="w-auto">
+                                                    <div class="main-profile">
+                                                        <img src="./assets/images/user.svg" class="main-profile-image" alt="GitHub Profile Image"
+                                                            loading="lazy" id="user-session-image">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column w-auto row-gap-1">
+                                                    <div class="col-12 pb-1">
+                                                        <span class="fs-5 header-color"
+                                                            id="user-session-username">Username</span>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row">
+                                                            <div class="w-auto">
+                                                                <span class="text-color">Followers :&nbsp;</span>
+                                                                <span class="text-color"
+                                                                    id="user-session-followers-count">00</span>
+                                                            </div>
+                                                            <div class="w-auto">
+                                                                <i class="bi bi-dot muted-text-color"></i>&nbsp;
+                                                                <span class="text-color">Following :&nbsp;</span>
+                                                                <span class="text-color"
+                                                                    id="user-session-following-count">00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <span class="text-color">Public Repos :&nbsp;</span>
+                                                        <span class="text-color"
+                                                            id="user-session-public-repo-count">00</span>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <span class="text-color">Created At :&nbsp;</span>
+                                                        <span class="text-color" id="user-session-created-date">13th of
+                                                            June
+                                                            2025</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <hr>
+                            </div>
+                            <div class="col-12 py-2">
+                                <span class="text-color fs-5">Restore Data <span
+                                        class="muted-text-color fs-6">(optional)</span></span>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card card-wrapper px-3 py-4">
+                                            <div class="d-flex flex-column row-gap-1 pt-4">
+                                                <div class="p-2 fab-wrapper-top-right">
+                                                    <button type="button" class="btn social-button"
+                                                        data-bs-toggle="popover" data-bs-trigger="hover focus"
+                                                        data-bs-placement="bottom" data-bs-custom-class="custom-popover"
+                                                        data-bs-title="Info for Restoring Data" data-bs-content="To successfully restore your backup, please follow this order:
+                                                <ol type='1' style='margin:0; padding-left:18px;'>
+                                                  <li><strong>Search Your GitHub Username</strong>: First, search for your GitHub username to verify the account you want to restore.</li>
+                                                  <li><strong>Upload the Backup File</strong>: Select the encrypted backup file you previously saved.</li>
+                                                  <li><strong>Enter the Passphrase</strong>: Provide the exact passphrase that was generated when creating the backup.</li>
+                                                  <li><strong>Decrypt the Data</strong>: Finally, click <em>Decrypt Data</em> to restore all following, follower, and progress details.</li>
+                                                </ol>
+                                                <p style='margin:0;'>Make sure you use the correct username, file, and passphrase. Any mismatch will prevent the restoration process.</p>
+                                                ">
+                                                        <i class="bi bi-info-circle-fill text-color fs-5"></i>
+                                                    </button>
+                                                </div>
+                                                <input type="file"
+                                                    class="form-control rounded-5 shadow-none input-field d-none"
+                                                    placeholder="User Data Backup" aria-label="Recipient username"
+                                                    aria-describedby="search-button" id="user-data-backup-import"
+                                                    accept="application/json,.json" readonly>
+                                                <label class="btn bg-transparent border-0 shadow-none"
+                                                    for="user-data-backup-import">
+                                                    <div class="card card-wrapper px-3 py-4">
+                                                        <div class="row gap-1">
+                                                            <div class="col-12 d-flex flex-row justify-content-center">
+                                                                <i class="bi bi-file-earmark-break-fill text-color"
+                                                                    style="font-size: 30px;"></i>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <span class="text-color">If you have a previous backup,
+                                                                    you
+                                                                    can use it to continue from your last saved state.
+                                                                    <span
+                                                                        class="text-color text-decoration-underline">Click
+                                                                        To Browse</span></span>
+                                                            </div>
+                                                            <div class="text-start pt-2">
+                                                                <span class="muted-text-color">Important:</span>
+                                                                <ul class="text-start pt-2" type="bullet">
+                                                                    <li class="muted-text-color">Only .json files are
+                                                                        accepted.</li>
+                                                                    <li class="muted-text-color">Backup files are fully
+                                                                        encrypted.</li>
+                                                                    <li class="muted-text-color">If the file has been
+                                                                        modified or edited in any way, it cannot be
+                                                                        decrypted and will not import correctly.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <div class="text-center">
+                                                    <span class="header-color pt-3" id="upload-file-name"
+                                                        style="display: none;">
+                                                        <i class="bi bi-check2-circle text-color"></i>
+                                                        <span
+                                                            id="upload-file-name-lable">git_hub_connection_visualizer(v1.0.0)_users_data_export.json</span>
+                                                    </span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <hr>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="col-12 text-start">
+                                                        <span class="text-color">Backup Passphrase</span>
+                                                    </div>
+                                                    <div class="col-12 pt-2">
+                                                        <div class="input-group shadow-none pt-3">
+                                                            <input type="text"
+                                                                class="form-control rounded-start-5 shadow-none input-field pt-2 pb-2 ps-3 pe-3"
+                                                                placeholder="Enter Passphrase" minlength="24"
+                                                                maxlength="24" aria-label="Recipient username"
+                                                                aria-describedby="search-button" spellcheck="false" id="import-passphrase">
+                                                            <button
+                                                                class="btn btn-secondary button-wrapper rounded-end-5 shadow-none ps-3 pe-3"
+                                                                type="button" id="decrypt-payload-button">
+                                                                <i class="bi bi-unlock2-fill"></i>&nbsp;
+                                                                Decrypt Data
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="col-12 pt-4" id="decrypt-payload-indicator"
+                                                        style="display: none;">
+                                                        <div class="row gap-1">
+                                                            <div
+                                                                class="col-12 d-flex flex-row justify-content-center align-items-baseline">
+                                                                <i class="bi bi-check2-circle text-color"
+                                                                    id="decrypt-payload-indicator-icon"></i>&nbsp;
+                                                                <span class="text-color header-color"
+                                                                    id="decrypt-payload-indicator-lable">File Restored
+                                                                    Successfully</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <span class="muted-text-color"
+                                                                    id="decrypt-payload-indicator-warning-lable"
+                                                                    style="display: none;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <hr>
+                            </div>
+                            <div class="col-12 py-2">
+                                <span class="text-color fs-5">Filters</span>
+                            </div>
+                            <div class="col-12">
+                                <div class="card card-wrapper px-3 py-4">
+                                    <div class="d-flex flex-column row-gap-1 pt-4">
+                                        <div class="p-2 fab-wrapper-top-right">
+                                            <button type="button" class="btn social-button" data-bs-toggle="popover"
+                                                data-bs-trigger="hover focus" data-bs-placement="bottom"
+                                                data-bs-custom-class="custom-popover"
+                                                data-bs-title="Info for Filter Options" data-bs-content="
+                                            <ul style='margin:0; padding-left:18px;'>
+                                              <li><strong>Unfollowers Only:</strong> Shows users you follow who do not follow you back.</li>
+                                              <li><strong>Fans Only:</strong> Shows users who follow you but you do not follow back.</li>
+                                              <li><strong>Mixed Results:</strong> Displays only Unfollowers and Fans, excluding settled users.</li>
+                                              <li><strong>Settled Results:</strong> Shows users where both sides follow each other.</li>
+                                            </ul>">
+                                                <i class="bi bi-info-circle-fill text-color fs-5"></i>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="col-12 d-flex flex-row justify-content-center align-items-center column-gap-2">
+                                            <input type="radio" class="btn-check" name="filter-type" id="filter-type-1"
+                                                checked autocomplete="off" value="UNFOLLOWERS_ONLY">
+                                            <label
+                                                class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
+                                                for="filter-type-1">
+                                                <i class="bi bi-heartbreak-fill"></i>&nbsp;
+                                                Unfollowers Only
+                                            </label>
+                                            <input type="radio" class="btn-check" name="filter-type" id="filter-type-2"
+                                                autocomplete="off" value="FANS_ONLY">
+                                            <label
+                                                class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
+                                                for="filter-type-2">
+                                                <i class="bi bi-star-fill"></i>&nbsp;
+                                                Fans Only
+                                            </label>
+                                            <input type="radio" class="btn-check" name="filter-type" id="filter-type-3"
+                                                autocomplete="off" value="MIXED_RESULT">
+                                            <label
+                                                class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
+                                                for="filter-type-3">
+                                                <i class="bi bi-leaf-fill"></i>&nbsp;
+                                                Mixed Result
+                                            </label>
+                                            <input type="radio" class="btn-check" name="filter-type" id="filter-type-4"
+                                                autocomplete="off" value="SETTLED_RESULT">
+                                            <label
+                                                class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
+                                                for="filter-type-4">
+                                                <i class="bi bi-shield-lock-fill"></i>&nbsp;
+                                                Settled Resultes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <hr>
+                            </div>
+                            <div class="col-12 py-2">
+                                <span class="text-color fs-5">Results</span>
+                            </div>
+                            <div class="card card-wrapper px-3 py-4">
+
+                                <div class="col-12 d-flex flex-column d-block pt-5">
+                                    <div class="p-2 fab-wrapper-top-right">
+                                        <button type="button" class="btn social-button" data-bs-toggle="popover"
+                                            data-bs-trigger="hover focus" data-bs-placement="bottom"
+                                            data-bs-custom-class="custom-popover" data-bs-title="Info for User Results"
+                                            data-bs-content="<p>
+                                    This application does not require you to create an account or provide a GitHub access token.
+                                    Because of this, we cannot offer direct actions such as <strong>Follow</strong> or <strong>Unfollow</strong> inside the app.
+                                    </p>
+                                    <p>
+                                    However, you can still manage connections through the official GitHub website:
+                                    </p>
+                                    <ul>
+                                      <li>
+                                        If you are already logged in to your GitHub account in this browser,
+                                        clicking the <strong>Profile</strong> button will open the user&rsquo;s official GitHub profile in a new tab,
+                                        where you can follow or unfollow them directly.
+                                      </li>
+                                      <li>
+                                        If you are not logged in, you can still open profiles and repositories to view details,
+                                        but follow/unfollow actions will not be available until you sign in on GitHub.
+                                      </li>
+                                    </ul>
+                                    ">
+                                            <i class="bi bi-info-circle-fill text-color fs-5"
+                                                style="z-index: 1000 !important;"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-12 scrollable-wrapper pe-2" id="result-component-parent">
+
+                                        <!-- result component -->
+                                        <div class="col-12" id="result-component" style="display: none;">
+                                            <div class="col-12 d-flex flex-row column-gap-2 px-1">
+                                                <div
+                                                    class="d-flex flex-row column-gap-2 justify-content-center align-items-center">
+                                                    <div class="profile clinet-indicate">
+                                                        <img src="./assets/images/user.svg" class="profile-image" alt="GitHub Profile Image"
+                                                            loading="lazy" id="client-profile-image">
+                                                    </div>
+                                                    <div>
+                                                        <i class="bi bi-heart-fill text-color fs-4"
+                                                            id="connection-indicator-icon"></i>
+                                                    </div>
+                                                    <div class="profile">
+                                                        <img src="./assets/images/user.svg" class="profile-image" alt="GitHub Profile Image"
+                                                            loading="lazy" id="user-profile-image">
+                                                    </div>
+                                                </div>
+                                                <div class="flex-column w-100">
+                                                    <div class="d-flex flex-row justify-content-between w-100">
+                                                        <span class="text-color" id="username">Username</span>
+                                                        <span
+                                                            class="badge badge-wrapper rounded-pill fw-normal px-3 py-2"
+                                                            id="type">user</span>
+                                                    </div>
+                                                    <div class="d-flex flex-row column-gap-2 w-100 pt-1">
+                                                        <a class="btn btn-outline-secondary link-button-wrapper rounded-5 px-3 btn-sm d-flex flex-row column-gap-2 align-items-center"
+                                                            role="button" aria-disabled="true" id="user-profile-opener">
+                                                            <i
+                                                                class="bi bi-box-arrow-up-right text-color icon-wrapper-xsm"></i>
+                                                            Profile
+                                                        </a>
+                                                        <a class="btn btn-outline-secondary link-button-wrapper rounded-5 px-3 btn-sm d-flex flex-row column-gap-2 align-items-center"
+                                                            role="button" aria-disabled="true" id="user-repo-opener">
+                                                            <i
+                                                                class="bi bi-box-arrow-up-right text-color icon-wrapper-xsm"></i>
+                                                            Repositories
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <!-- result component -->
+
+                                        <!-- placeholder component -->
+                                        <div class="col-12 d-flex justify-content-center align-items-center scrollable-wrapper"
+                                            id="placeholder-banner" style="display: none !important;">
+                                            <div class="spinner-grow text-light" style="width: 3rem; height: 3rem;"
+                                                role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                        </div>
+                                        <!-- placeholder component -->
+
+                                        <!-- empty result component -->
+                                        <div class="col-12 d-flex justify-content-center align-items-center scrollable-wrapper"
+                                            id="empty-result-banner">
+                                            <span class="text-color">No Results</span>
+                                        </div>
+                                        <!-- empty result component -->
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card card-wrapper px-3 py-4">
+                                            <div class="d-flex flex-column">
+                                                <div class="p-2 fab-wrapper-top-right">
+                                                    <button type="button" class="btn social-button"
+                                                        data-bs-toggle="popover" data-bs-trigger="hover focus"
+                                                        data-bs-placement="bottom" data-bs-custom-class="custom-popover"
+                                                        data-bs-title="Info for Data Scanning" data-bs-content="
+                                                <p>GitHub API allows a limited number of requests per hour (currently up to 60 requests per hour).</p>
+                                                <p>If you reach this limit, the scanning process may pause or slow down until the rate limit resets. Scanning progress updates automatically as more following and follower data is scaned.</p>
+                                                ">
+                                                        <i class="bi bi-info-circle-fill text-color fs-5"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-12 pb-3">
+                                                    <span class="text-color fs-5">Data Scanning Monitor</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column row-gap-1">
+                                                            <span class="text-color">
+                                                                <i
+                                                                    class="bi bi-database-fill-down text-color"></i>&nbsp;
+                                                                Followings Data Pool
+                                                            </span>
+                                                            <div class="progress" role="progressbar"
+                                                                aria-label="Animated striped example" aria-valuenow="0"
+                                                                aria-valuemin="0" aria-valuemax="100"
+                                                                id="following-progress-wrapper">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                                    style="width: 0%"
+                                                                    id="following-progress-representer">0%
+                                                                </div>
+                                                            </div>
+                                                            <span class="muted-text-color pt-1"
+                                                                id="following-scan-complete-indicator">Remaning User
+                                                                Data...</span>
+                                                        </div>
+                                                        <div
+                                                            class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column row-gap-1 pt-1 pt-sm-1 pt-md-1 pt-lg-0">
+                                                            <span class="text-color">
+                                                                <i
+                                                                    class="bi bi-database-fill-down text-color"></i>&nbsp;
+                                                                Followers Data Pool
+                                                            </span>
+                                                            <div class="progress" role="progressbar"
+                                                                aria-label="Animated striped example" aria-valuenow="0"
+                                                                aria-valuemin="0" aria-valuemax="100"
+                                                                id="follower-progress-wrapper">
+                                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                                    style="width: 0%"
+                                                                    id="follower-progress-representer">0%
+                                                                </div>
+                                                            </div>
+                                                            <span class="muted-text-color pt-1"
+                                                                id="follower-scan-complete-indicator">Remaning User
+                                                                Data...</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <hr>
+                                                </div>
+                                                <div class="col-12">
+                                                    <span class="text-color fs-5">Scan New Data Set</span>
+                                                </div>
+                                                <div class="col-12 pt-1">
+                                                    <div class="row">
+                                                        <div class="col-12 pt-1">
+                                                            <span class="text-color">Remaning Followings Scan Attempts
+                                                                :&nbsp;</span>
+                                                            <span class="text-color"
+                                                                id="following-scan-attempts">00</span>
+                                                        </div>
+                                                        <div class="col-12 pt-1">
+                                                            <span class="text-color">Remaning Followers Scan Attempts
+                                                                :&nbsp;</span>
+                                                            <span class="text-color"
+                                                                id="follower-scan-attempts">00</span>
+                                                        </div>
+                                                        <div
+                                                            class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-row align-items-center">
+                                                            <span class="text-color d-none"><sup>&ast;</sup>
+                                                                You can start scaning 60 min. from now.
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-12 d-grid pt-3">
+                                                            <a class="btn btn-outline-secondary pagination-button-wrapper rounded-5 py-2"
+                                                                role="button" aria-disabled="true"
+                                                                id="user-result-scan-button">
+                                                                <span class="spinner-grow spinner-grow-sm text-light"
+                                                                    aria-hidden="true"></span>&nbsp;
+                                                                Scan Now
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 py-2">
+                                <hr>
+                            </div>
+                            <div class="col-12 py-2">
+                                <span class="text-color fs-5">Backup Data</span>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card card-wrapper px-3 py-4">
+                                            <div class="d-flex flex-column row-gap-1">
+                                                <div class="p-2 fab-wrapper-top-right">
+                                                    <button type="button" class="btn social-button"
+                                                        data-bs-toggle="popover" data-bs-trigger="hover focus"
+                                                        data-bs-placement="bottom" data-bs-custom-class="custom-popover"
+                                                        data-bs-title="Info for Creating Backups" data-bs-content="<p>When creating a backup, always generate and copy the passphrase <strong>before</strong> downloading the file. After the file is downloaded, the application automatically generates a new passphrase and updates the input field to prepare for the next backup.</p>
+                                                <p>If you copy the passphrase after downloading, you will end up copying the new passphrase, which will not match the backup file you just saved.</p>
+                                                ">
+                                                        <i class="bi bi-info-circle-fill text-color fs-5"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-12 d-flex flex-row justify-content-center">
+                                                    <i class="bi bi-lock-fill text-color" style="font-size: 30px;"></i>
+                                                </div>
+                                                <div class="text-center">
+                                                    <span class="text-color">Secure Data Backup and Encryption</span>
+                                                </div>
+                                                <div class="text-start pt-2">
+                                                    <span class="muted-text-color">Your backup files are protected with
+                                                        strong, built-in encryption to keep your data safe. You can
+                                                        generate
+                                                        a unique passphrase with a single click and easily copy it for
+                                                        safekeeping.</span>
+                                                    <br><br>
+                                                    <span class="muted-text-color pt-2">Important:</span>
+                                                    <ul class="text-start pt-2" type="bullet">
+                                                        <li class="muted-text-color">This exact passphrase is required
+                                                            to
+                                                            restore the backup.</li>
+                                                        <li class="muted-text-color">Without it, the encrypted file
+                                                            cannot
+                                                            be unlocked, even by this application.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12">
+                                                    <hr>
+                                                </div>
+                                                <div class="col-12 text-start">
+                                                    <span class="text-color">Generate Passphrase</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="input-group shadow-none pt-3">
+                                                        <input type="text"
+                                                            class="form-control rounded-start-5 shadow-none input-field pt-2 pb-2 ps-3 pe-3"
+                                                            placeholder="Enter Passphrase" minlength="24" maxlength="24"
+                                                            aria-label="Recipient username"
+                                                            aria-describedby="search-button" spellcheck="false" id="generate-passphrase"
+                                                            readonly>
+                                                        <button
+                                                            class="btn btn-secondary button-wrapper shadow-none ps-3 pe-3"
+                                                            type="button" id="generate-passphrase-button">
+                                                            <i class="bi bi-key-fill text-color"></i>&nbsp;
+                                                            Generate New Passphrase
+                                                        </button>
+                                                        <button
+                                                            class="btn btn-secondary button-wrapper rounded-end-5 shadow-none ps-3 pe-3"
+                                                            type="button" id="copy-passphrase-button">
+                                                            <i class="bi bi-copy text-color"
+                                                                id="copy-passphrase-indicator"></i>&nbsp;
+                                                            Copy
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 text-start py-3">
+                                                    <span class="text-color">Download Encrypted File</span>
+                                                </div>
+                                                <div class="col-12 d-grid">
+                                                    <a class="btn btn-outline-secondary pagination-button-wrapper rounded-5 py-2"
+                                                        role="button" aria-disabled="true"
+                                                        id="user-data-backup-export-button">
+                                                        <i class="bi bi-download me-1 fs-5"></i>&nbsp;
+                                                        Download File
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main-card -->
+                    <!-- footer -->
+                    <footer class="col-12 d-flex flex-column pt-2 pb-4 position-relative">
+                        <div class="col-12 d-flex flex-row justify-content-center column-gap-2">
+                            <a class="btn social-button" role="button" aria-disabled="true" href="https://github.com/dulanjayabhanu">
+                                <i class="bi bi-github text-color fs-4"></i>
+                            </a>
+                            <a class="btn social-button" role="button" aria-disabled="true" href="https://x.com/DulanjayaBhanu">
+                                <i class="bi bi-twitter-x text-color fs-4"></i>
+                            </a>
+                        </div>
+                        <div class="col-12 d-flex flex-column row-gap-2 text-center pt-2">
+                            <span class="muted-text-color text-capitalize">GitHub Connection Visualizer is not affiliated with or
+                                endorsed
+                                by GitHub. All content posted here is public and owned by its respective authors.</span>
+                            <div class="col-12 py-3">
+                                <div class="d-flex flex-row justify-content-center align-items-center column-gap-3">
+                                    <a href="/" class="header-color footer-link-button">Home</a>
+                                    <span class="muted-text-color">|</span>
+                                    <a href="./privacy-policy.html" class="header-color footer-link-button">Privacy Policy</a>
+                                    <span class="muted-text-color">|</span>
+                                    <a href="./terms-of-use.html" class="header-color footer-link-button">Terms Of Use</a>
+                                </div>
+                            </div>
+                            <span class="muted-text-color text-capitalize">&copy; <span class="muted-text-color" id="copyright-year">2025</span>
+                                GitHub Connection Visualizer. All rights
+                                reserved.</span>
+                        </div>
+                    </footer>
+                    <!-- footer -->
+                </div>
+                <!-- main-application-related-content-wrapper -->
+
+                <!-- main-dom-content-loading-area -->
+            </div>
+        </div>
+
+        <!-- glassmorphism gradient blobs -->
+        <div class="gradient-blob gradient-blob-top-left"></div>
+        <div class="gradient-blob gradient-blob-middle-right"></div>
+        <div class="gradient-blob gradient-blob-bottom-left"></div>
+        <!-- glassmorphism gradient blobs -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
