@@ -154,8 +154,8 @@ Security and privacy are core principles of GitHub Connection Visualizer:
 
 This application is governed by a dedicated **Privacy Policy** and **Terms of Use**. These documents explain how data is handled, user responsibilities, and the limitations of the tool.  
 
-- [Privacy Policy](./privacy-policy.html)  
-- [Terms of Use](./terms-of-use.html)  
+- [Privacy Policy](https://dulanjayabhanu.github.io/github-connection-visualizer/privacy-policy.html)  
+- [Terms of Use](https://dulanjayabhanu.github.io/github-connection-visualizer/terms-of-use.html)  
 
 Please review these pages before using the application.
 
