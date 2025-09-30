@@ -25,7 +25,7 @@ export class ManifestDataLoader{
         if(!this.#manifestData){
             // ManifestData object not available
             try {
-                const response = await fetch("/manifest.json");
+                const response = await fetch("./manifest.json");
 
                 // check if the fetching process is completed or not
                 if (response.ok) {

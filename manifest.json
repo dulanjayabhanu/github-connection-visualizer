@@ -2,7 +2,7 @@
   "name": "GitHub Connection Visualizer",
   "short_name": "GHCV",
   "description": "Discover And Manage Your GitHub Connections With Ease.",
-  "start_url": "/",
+  "start_url": "./",
   "version": "1.0.0",
   "display": "standalone",
   "background_color": "#131315",
