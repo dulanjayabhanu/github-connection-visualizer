@@ -9,9 +9,9 @@
 <div align="center">
     <a href="https://github.com/dulanjayabhanu/github-connection-visualizer/releases">Releases</a>
     <span>&nbsp;|&nbsp;</span>
-    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="https://dulanjayabhanu.github.io/github-connection-visualizer/privacy-policy.html">Privacy Policy</a>
     <span>&nbsp;|&nbsp;</span>
-    <a href="terms-of-use.html">Terms Of Use</a>
+    <a href="https://dulanjayabhanu.github.io/github-connection-visualizer/terms-of-use.html">Terms Of Use</a>
     <span>&nbsp;|&nbsp;</span>
     <a href="https://github.com/dulanjayabhanu/github-connection-visualizer/discussions">Discussions</a>
 </div>
