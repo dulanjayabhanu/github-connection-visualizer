@@ -240,7 +240,7 @@
                                         </div>
                                         <div class="col-12 text-center">
                                             <span class="header-color text-capitalize">This app has a small learning
-                                                curve. For the best experience, we recommend reading the Usage Notes
+                                                curve. For the best experience, It is recommend reading the Usage Notes
                                                 before you start.</span>
                                         </div>
                                         <div class="col-12 pt-3">
@@ -275,8 +275,8 @@
                                                                     To handle this, the app uses a <strong
                                                                         class="text-color">Data Scanning
                                                                         Monitor</strong> and a <strong
-                                                                        class="text-color">progress tracking
-                                                                        mechanism</strong> that lets you gather data in
+                                                                        class="text-color">Progress Tracking
+                                                                        Mechanism</strong> that lets you gather data in
                                                                     safe, repeatable steps until the scan is complete.
                                                                 </li>
                                                                 <li class="text-color">You can also pause at any time by
@@ -458,10 +458,11 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="col-12 text-start">
-                                                        <span class="text-color">Backup Passphrase</span>
+                                                        <span class="text-color">Backup Passphrase</span><br/>
+                                                        <span class="muted-text-color">Paste your passphrase using <span class="badge badge-wrapper rounded-pill fw-normal px-2 py-1">Ctrl</span> <span class="text-color">+</span> <span class="badge badge-wrapper rounded-pill fw-normal px-2 py-1">V</span> on Windows/Linux or <span class="badge badge-wrapper rounded-pill fw-normal px-2 py-1">Cmd</span> <span class="text-color">+</span> <span class="badge badge-wrapper rounded-pill fw-normal px-2 py-1">V</span> on macOS.</span>
                                                     </div>
                                                     <div class="col-12 pt-2">
-                                                        <div class="input-group shadow-none pt-3">
+                                                        <div class="input-group shadow-none pt-2">
                                                             <input type="text"
                                                                 class="form-control rounded-start-5 shadow-none input-field pt-2 pb-2 ps-3 pe-3"
                                                                 placeholder="Enter Passphrase" minlength="24"
@@ -516,10 +517,10 @@
                                                 data-bs-custom-class="custom-popover"
                                                 data-bs-title="Info for Filter Options" data-bs-content="
                                             <ul style='margin:0; padding-left:18px;'>
-                                              <li><strong>Unfollowers Only:</strong> Shows users you follow who do not follow you back.</li>
-                                              <li><strong>Fans Only:</strong> Shows users who follow you but you do not follow back.</li>
-                                              <li><strong>Mixed Results:</strong> Displays only Unfollowers and Fans, excluding settled users.</li>
-                                              <li><strong>Settled Results:</strong> Shows users where both sides follow each other.</li>
+                                              <li><strong>Unfollowers:</strong> People you follow, but they do not follow you back.</li>
+                                              <li><strong>Fans:</strong> People who follow you, but you do not follow them back.</li>
+                                              <li><strong>Mixed Connections:</strong> Only shows Unfollowers and Fans.</li>
+                                              <li><strong>Settled Connections:</strong> People where you both follow each other.</li>
                                             </ul>">
                                                 <i class="bi bi-info-circle-fill text-color fs-5"></i>
                                             </button>
@@ -532,7 +533,7 @@
                                                 class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
                                                 for="filter-type-1">
                                                 <i class="bi bi-heartbreak-fill"></i>&nbsp;
-                                                Unfollowers Only
+                                                Unfollowers
                                             </label>
                                             <input type="radio" class="btn-check" name="filter-type" id="filter-type-2"
                                                 autocomplete="off" value="FANS_ONLY">
@@ -540,7 +541,7 @@
                                                 class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
                                                 for="filter-type-2">
                                                 <i class="bi bi-star-fill"></i>&nbsp;
-                                                Fans Only
+                                                Fans
                                             </label>
                                             <input type="radio" class="btn-check" name="filter-type" id="filter-type-3"
                                                 autocomplete="off" value="MIXED_RESULT">
@@ -548,7 +549,7 @@
                                                 class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
                                                 for="filter-type-3">
                                                 <i class="bi bi-leaf-fill"></i>&nbsp;
-                                                Mixed Result
+                                                Mixed Connections
                                             </label>
                                             <input type="radio" class="btn-check" name="filter-type" id="filter-type-4"
                                                 autocomplete="off" value="SETTLED_RESULT">
@@ -556,7 +557,7 @@
                                                 class="btn btn-secondary button-wrapper rounded-5 shadow-none ps-3 pe-3"
                                                 for="filter-type-4">
                                                 <i class="bi bi-shield-lock-fill"></i>&nbsp;
-                                                Settled Resultes
+                                                Settled Connections
                                             </label>
                                         </div>
                                     </div>

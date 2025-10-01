@@ -76,18 +76,18 @@ export class EncryptDataManageService{
     }
 
     async decryptData(encryptedPayload){
-        // get the salt value
-        const salt = CryptoRelatedValueGenerator.convertFromBase64(encryptedPayload.salt);
-        // get the initialize vector value
-        const iv = CryptoRelatedValueGenerator.convertFromBase64(encryptedPayload.iv);
-        // get the data value
-        const data = CryptoRelatedValueGenerator.convertFromBase64(encryptedPayload.cipher);
-        // construct the key
-        const key = await this.#generateDeriveKey(salt);
-
         let decodedAndDecryptedPayload = null;
         
         try{
+            // get the salt value
+            const salt = CryptoRelatedValueGenerator.convertFromBase64(encryptedPayload.salt);
+            // get the initialize vector value
+            const iv = CryptoRelatedValueGenerator.convertFromBase64(encryptedPayload.iv);
+            // get the data value
+            const data = CryptoRelatedValueGenerator.convertFromBase64(encryptedPayload.cipher);
+            // construct the key
+            const key = await this.#generateDeriveKey(salt);
+
             // construct the plainBuffer
             const plainBuffer = await crypto.subtle.decrypt(
                 {

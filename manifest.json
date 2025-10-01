@@ -3,7 +3,7 @@
   "short_name": "GHCV",
   "description": "Discover And Manage Your GitHub Connections With Ease.",
   "start_url": "./",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "display": "standalone",
   "background_color": "#131315",
   "theme_color": "#191d24",

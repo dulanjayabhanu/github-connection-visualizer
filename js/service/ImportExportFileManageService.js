@@ -87,7 +87,17 @@ export class ImportExportFileManageService{
         // check if the UserSession available or not
         if(userSession != null){
             // UserSession available and get the upload file extension
-            const uploadfileExtension = fileUploadEvent.target.files[0].name.split(".")[3].toLowerCase();
+            let uploadfileExtension = "";
+
+            // get the file name detail combination array
+            const uploadFileNameDetailCombinationArray = fileUploadEvent.target.files[0].name.split(".");
+            
+            // check if the upload file name has a valid extracable detail length for extact the file extenstion 
+            if (uploadFileNameDetailCombinationArray.length > 1) {
+                // upload file name has a valid extracable detail length and assign the file extenstion 
+                uploadfileExtension = uploadFileNameDetailCombinationArray[uploadFileNameDetailCombinationArray.length - 1].toLowerCase();
+            }
+
             // get the upload file MIME type
             const uploadfileMimeType = fileUploadEvent.target.files[0].type;
             

@@ -47,10 +47,10 @@ The application integrates with the GitHub API to fetch user follower and follow
 ### Intelligent Data Sorting and Filtering
 Connections are automatically analyzed and classified into four categories:
 
-- **Unfollowers only**: Users you follow who do not follow you back.  
-- **Fans only**: Users who follow you but you do not follow back.  
-- **Mixed results**: A combined view of fans and unfollowers for quick review.  
-- **Settled results**: Mutual followers, showing balanced and established connections.  
+- **Unfollowers**: People you follow, but they do not follow you back.  
+- **Fans**: People who follow you, but you do not follow them back.  
+- **Mixed Connections**: Only shows Unfollowers and Fans.  
+- **Settled Connections**: People where you both follow each other.  
 
 This structured filtering allows users to focus on managing their GitHub relationships based on real needs.
 

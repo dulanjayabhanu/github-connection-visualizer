@@ -244,22 +244,29 @@ export class ComponentRenderer{
             // check if the following scan process complete or not
             if(followingPresentage >= 100){
                 // following scan process complete
-                this.#followingScanCompleteIndicator.innerHTML = "Complete";
+                this.#followingScanCompleteIndicator.innerHTML = "Completed";
+                // remove the following scan complete indicator progressbar animation bahavior to stable 
+                this.#followingProgressRepresenter.className = "progress-bar progress-bar-striped";
                 
             }else{
                 // following scan process not complete and still have to scan user data
                 this.#followingScanCompleteIndicator.innerHTML = "Remaning User Data...";
-                
+                // implement the following scan complete indicator progressbar animation bahavior 
+                this.#followingProgressRepresenter.className = "progress-bar progress-bar-striped progress-bar-animated";
             }
             
             // check if the follower scan process complete or not
             if(followerPresentage >= 100){
                 // follower scan process complete
-                this.#followerScanCompleteIndicator.innerHTML = "Complete";
+                this.#followerScanCompleteIndicator.innerHTML = "Completed";
+                // remove the follower scan complete indicator progressbar animation bahavior to stable 
+                this.#followerProgressRepresenter.className = "progress-bar progress-bar-striped";
                 
             }else{
                 // follower scan process not complete and still have to scan user data
                 this.#followerScanCompleteIndicator.innerHTML = "Remaning User Data...";
+                // implement the follower scan complete indicator progressbar animation bahavior 
+                this.#followerProgressRepresenter.className = "progress-bar progress-bar-striped progress-bar-animated";
             }
 
             // update the inner content of the follower progress wrapper
