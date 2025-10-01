@@ -58,4 +58,3 @@ bower_components/
 # (in case you build locally before deploy)
 # -----------------------------
 _site/
-docs/
