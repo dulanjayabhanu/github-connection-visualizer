@@ -1,0 +1,68 @@
+name: Apply Labels from Issue Form
+
+# trigger the workflow when a new issue is opened
+on:
+  issues:
+    types: [opened]
+
+# provide the write permission to add labels to issue
+permissions:
+  issues: write
+
+jobs:
+  add_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract and apply label from issue body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // get the full text body of the issue
+            const issueBody = context.payload.issue.body;
+
+            // seperate the issue content by each new line (\n)
+            const lines = issueBody.split('\n');
+
+            // initialize a reference for storing the selected label
+            let selectedLabel = null;
+
+            // iterate the each line of the issue content
+            for (let i = 0; i < lines.length; i++) {
+
+              // check if the main heading of the drop down section is found or not
+              if (lines[i].includes('Select applicable labels')) {
+                // main heading of the drop down section is found
+
+                // find the first non-empty line as the label
+                for (let j = i + 1; j < lines.length; j++) {
+                  // get the line
+                  const candidate = lines[j].trim();
+                  
+                  // check if the line is empty or not
+                  if (candidate) {
+                    // line is not empty
+                    selectedLabel = candidate;
+                    break;
+                  }
+                }
+
+                break;
+              }
+            }
+
+            // check if the selected label available or not
+            if (selectedLabel) {
+              // selected label available and construct the necessary credentials for creating the new label object
+              const repoOwner = context.repo.owner;
+              const repoName = context.repo.repo;
+              const issueNumber = context.issue.number;
+              const labels = [selectedLabel];
+
+              // apply the all the credentials to the issue
+              await github.rest.issues.addLabels({
+                owner: repoOwner,
+                repo: repoName,
+                issue_number: issueNumber,
+                labels: labels
+              });
+            }
