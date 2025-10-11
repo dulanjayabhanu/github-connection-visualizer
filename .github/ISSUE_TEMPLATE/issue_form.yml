@@ -1,0 +1,41 @@
+name: "New Issue or Suggestion"
+description: "Use this form to report bugs, suggest improvements, or request new features."
+# default prefix [ISSUE] for the issue title
+title: "[ISSUE] "
+labels: []
+
+body:
+  # description field
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Clearly describe the issue, bug, or suggestion."
+      placeholder: "Explain what happened or what you’d like to see improved..."
+    validations:
+      required: true
+
+  # label selection dropdown field
+  - type: dropdown
+    id: labels
+    attributes:
+      label: "Select applicable labels"
+      description: "Choose one label that best fits this issue."
+      options:
+        - "bug"
+        - "enhancement"
+        - "feature request"
+        - "UI/UX improvement"
+        - "documentation"
+        - "help wanted"
+        - "question"
+    validations:
+      required: true
+
+  # additional info field
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Additional Information"
+      description: "Include logs, screenshots, or other supporting information (optional)."
+      placeholder: "Add any extra details here..."
