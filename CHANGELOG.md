@@ -5,6 +5,17 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.2] - 2026-09-10
+### Added
+- Deprecation notice banner in the application UI, directing users to Gitfella.
+- Deprecation notice in the README, directing developers to Gitfella.
+
+### Changed
+- Increased base font size from 12px to 14px for improved readability.
+- Fixed copyright year to 2025, reflecting the conclusion of active development.
+
+---
+
 ## [1.0.1] - 2025-10-01
 ### Fixed
 - Corrected spelling in the data scanning progress indicator (`complete` → `completed`).
@@ -39,16 +50,3 @@ This project adheres to [Semantic Versioning](https://semver.org/).
   - User-friendly filtering and sorting mechanisms.
 - Full documentation, including README, software architecture diagrams, and usage notes.
 - Production-grade UI/UX with dark theme and glassmorphism effects.
-
----
-
-## [1.0.1] - 2026-09-10
-### Added
-- Deprecation notice banner in the application UI, directing users to Gitfella.
-- Deprecation notice in the README, directing developers to Gitfella.
-
-### Changed
-- Increased base font size from 12px to 14px for improved readability.
-- Fixed copyright year to 2025, reflecting the conclusion of active development.
-
----
