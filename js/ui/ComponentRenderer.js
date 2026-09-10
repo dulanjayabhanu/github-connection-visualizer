@@ -494,8 +494,10 @@ export class ComponentRenderer{
     renderContinuousDateRelatedComponents(){
         // check if the original copyright year and usersession created date components available or not
         if(this.#copyrightYear != null && this.#userSessionCreatedDate != null){
-            // original copyright year and usersession created date components available and get the current year
-            const currentYear = new Date().getFullYear();
+            // original copyright year and usersession created, date components available and get the current year
+            
+            //Fixed copyright year: GCV development concluded in 2025, no further updates planned
+            const currentYear = "2025";
             // get the current date
             const currentDate = new Date().toDateString();
 

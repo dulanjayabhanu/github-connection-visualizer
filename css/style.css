@@ -1,5 +1,5 @@
 :root{
-    --font-size: 12px;
+    --font-size: 14px;
     --font-family: "Inter";
     --font-style: normal;
     --main-color: #131315;
@@ -326,6 +326,46 @@
     background-repeat: no-repeat;
     background-size: contain;
     object-fit: contain;
+}
+
+.alert-notice {
+  background-color: rgba(0, 130, 54, 0.15);
+  color: var(--action-color);
+  border: 1px solid rgba(0, 130, 54, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px var(--box-shadow-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  border-radius: 0;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 0;
+}
+
+.alert-notice a {
+  color: var(--action-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.alert-notice a:hover {
+  color: var(--nutral-action-color);
+}
+
+.alert-notice .bi {
+  color: #4ADE80;
+}
+
+.alert-notice a {
+  color: #4ADE80;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.alert-notice a:hover {
+  color: #6EE7A0;
 }
 /* class selectors - end */
 

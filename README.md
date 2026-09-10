@@ -20,15 +20,10 @@
 
 # GitHub Connection Visualizer
 
-<div align="center">
-    <img src="./docs/images/github-connection-visualizer-welcome-preview.webp" alt="Welcome image of the GitHubConnection Visualizer"/>
-</div>
+<br/>
 
-<div align="center">
-    <a href="https://dulanjayabhanu.github.io/github-connection-visualizer/">
-       <img src="https://img.shields.io/badge/Launch_App-24292f?style=for-the-badge&logo=github&logoColor=#fdfffc" alt="Button for the launch app"> 
-    </a>
-</div>
+> [!IMPORTANT]
+> This project is no longer actively maintained. [Gitfella](https://github.com/dulanjayabhanu/gitfella) is the actively maintained replacement, offering improved reliability, a modern interface, and additional features.
 
 <br/>
 
