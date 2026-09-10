@@ -354,7 +354,7 @@
 }
 
 .alert-notice .bi {
-  color: #4ADE80;
+  color: var(--action-color);
 }
 
 .alert-notice a {
